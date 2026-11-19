@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sommelier AI – Nhận biết rượu vang</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="wrap">
+<h1>Sommelier AI</h1>
+<p class="sub">Nhập các chỉ số phân tích hóa học của một mẫu rượu vang. Mô hình sẽ nhận biết đó là vang đỏ hay vang trắng và ước lượng điểm chất lượng.</p>
+<div class="grid">
+<section class="card" id="res" aria-live="polite">
+<svg id="glass" viewBox="0 0 200 250" role="img" aria-label="Ly vang: màu thể hiện loại vang, mực rượu thể hiện điểm chất lượng">
+<defs><clipPath id="bowl"><path d="M50 14C46 88 58 148 100 154C142 148 154 88 150 14Z"/></clipPath></defs>
+<g clip-path="url(#bowl)"><g id="liqg"><rect id="liq" x="40" y="0" width="120" height="180"/></g></g>
+<path class="gl" d="M50 14C46 88 58 148 100 154C142 148 154 88 150 14Z"/>
+<path class="gl" d="M100 154V222"/><ellipse class="gl" cx="100" cy="228" rx="38" ry="6"/>
+</svg>
+<div class="tname" id="tname"></div>
+<div class="tp" id="tp"></div>
+<div class="split" id="split"><i></i></div>
+<div class="lbl"><span id="lr"></span><span id="lw"></span></div>
+<div class="q"><div class="qn" id="qn"></div><div class="ql" id="ql"></div><div class="qs" id="qs"></div></div>
+</section>
+<section class="card">
+<div class="btns"><button id="bRed" class="r">Mẫu vang đỏ</button><button id="bWhite" class="w">Mẫu vang trắng</button><button id="bReset">Đặt lại</button></div>
+<p id="note"></p>
+<div id="inputs"></div>
+</section>
+</div>
+<section class="card" style="margin-top:20px">
+<h2>Chỉ số ảnh hưởng nhiều nhất đến điểm chất lượng</h2>
+<div id="imp"></div>
+</section>
+<p class="foot" id="meta"></p>
+<p class="foot">Web đánh giá từ 11 chỉ số phân tích hóa học, không nhận diện nhãn chai hay hình ảnh. Dữ liệu là vang vinho verde của Bồ Đào Nha, nên kết quả chỉ mang tính tham khảo.</p>
+</div>
+<script src="js/model-data.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
